@@ -1,11 +1,6 @@
 #!/usr/bin/expect
 set pass "1106408809"
-spawn scp zhenggan_assignment1.cpp Client.cpp Server.cpp zhenggan@timberlake.cse.buffalo.edu:~/cse489589_assignment1/zhenggan/src
-expect {
-password: {send "$pass\r"; exp_continue}
-}
-
-spawn scp ../include/Client.h ../include/Server.h ../include/global.h ../include/LoggedInListItemClient.h ../include/LoggedInListItemServer.h zhenggan@timberlake.cse.buffalo.edu:~/cse489589_assignment1/zhenggan/include
+spawn scp src/abt.cpp src/gbn.cpp src/sr.cpp zhenggan@embankment.cse.buffalo.edu:~/cse489589_assignment2/zhenggan/src
 expect {
 password: {send "$pass\r"; exp_continue}
 }
