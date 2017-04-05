@@ -28,7 +28,6 @@ struct pkt sndpktA;
 struct pkt sndpktB;
 
 
-
 int genChecksum(int seqnum, int acknum, char *data){
     int retChecksum = 0;
     retChecksum += seqnum;
