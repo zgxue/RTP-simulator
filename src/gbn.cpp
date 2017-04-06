@@ -56,12 +56,18 @@ void A_output(struct msg message)
 /* called from layer 3, when a packet arrives for layer 4 */
 void A_input(struct pkt packet)
 {
-    if(isValidChecksum(packet)){
+    if(isValidChecksum(packet) ){
         baseA = getacknum(packet) + 1;
         if(baseA == nextseqnumA)
             stoptimer(A);
         else
             starttimer(A, TIMEOUT);
+
+//        if(!bufferedMsgs.empty()){
+//            A_sendMsg(bufferedMsgs.front());
+//            bufferedMsgs.pop_front();
+//            ++nextseqnumA;
+//        }
     }
 }
 
