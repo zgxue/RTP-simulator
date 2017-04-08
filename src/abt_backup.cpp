@@ -19,7 +19,7 @@ using namespace std;
 **********************************************************************/
 
 /********* STUDENTS WRITE THE NEXT SEVEN ROUTINES *********/
-#define TIMEOUT 15.0*3
+#define TIMEOUT 15.0
 
 int MachineStatusA;  //0, 1, 2, 3
 int MachineStatusB;  //0, 1
