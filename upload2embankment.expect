@@ -1,6 +1,0 @@
-#!/usr/bin/expect
-set pass "1106408809"
-spawn scp src/abt.cpp src/gbn.cpp src/sr.cpp zhenggan@embankment.cse.buffalo.edu:~/cse489589_assignment2/zhenggan/src
-expect {
-password: {send "$pass\r"; exp_continue}
-}
